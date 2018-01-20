@@ -418,6 +418,19 @@ sendGetSentimentRequest(question).then(function (parsedBody) {
 if(timings && count==1){
     basicQnAMakerDialog=false;
     setTimeout(function(){
+	    //
+	    var msg;
+	    msg.attachments([
+                        new builder.HeroCard(session)
+                        .images([builder.CardImage.create(session, body.articles[i]."https://i.ytimg.com/vi/_8KGlebWqTQ/maxresdefault.jpg")])
+                    ]);
+                    session.send(msg).endDialog();
+	    
+	    
+	    //
+	    
+	    
+	    
         var msg="You there?";
         session.send(msg).endDialog();
         var msg="I am back";
