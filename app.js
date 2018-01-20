@@ -44,7 +44,7 @@ var connector = new builder.ChatConnector({
 // Listen for messages from users
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
-
+var ex;
 
 
 const LuisModelUrl = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/911d1e5e-086b-4341-9cc6-9827bc186a12?subscription-key=7aeea59a16a5467aacff93989cd145f5&verbose=true&timezoneOffset=0&q=";
