@@ -419,13 +419,18 @@ if(timings && count==1){
     basicQnAMakerDialog=false;
     setTimeout(function(){
 	    //
-	//    var urlImage="https://i.ytimg.com/vi/_8KGlebWqTQ/maxresdefault.jpg";
+ var imageURL="https://i.ytimg.com/vi/_8KGlebWqTQ/maxresdefault.jpg";
 	  //  var msg = new builder.Message(session) 
 	    //msg.attachments([
               //          new builder.HeroCard(session)
                 //        .images([builder.CardImage.create(session, body.articles[i].urlImage)])
                   //  ]);
                     //session.send(msg).endDialog();
+    var msg = new builder.Message(session)
+    msg.attachments([
+        new builder.HeroCard(session)
+        .images([builder.CardImage.create(session, imageURL)])
+	    ]);
 	    
 	    
 	    //
