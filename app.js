@@ -387,7 +387,7 @@ else if(qnaMakerResult.answers && qnaMakerResult.score >= 0.5 && news){
                     ])
                 ]);
                 session.send(msg).endDialog();
-                },10000
+                },30000
             );
         }
     });
@@ -451,7 +451,7 @@ intents.matches('GetWOD', function (session, args) {
             session.send(msg).endDialog;
         }
         else{
-            var msg="Nevermind, it was "\"+wordi+""\.";
+            var msg="Nevermind! It was "+wordi+" instead.";
             session.send(msg).endDialog;
         }
         var msg="Okay I'll ask a few questions from the passage you read earlier. Just for fun.";
