@@ -451,7 +451,7 @@ intents.matches('GetWOD', function (session, args) {
             session.send(msg).endDialog;
         }
         else{
-            var msg="Nevermind! It was "+wordi+" instead.";
+            var msg="Nevermind! It was \'"+wordi+"\'.";
             session.send(msg).endDialog;
         }
         var msg="Okay I'll ask a few questions from the passage you read earlier. Just for fun.";
