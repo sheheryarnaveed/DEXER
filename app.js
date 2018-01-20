@@ -431,7 +431,7 @@ if(timings && count==1){
         new builder.HeroCard(session)
         .images([builder.CardImage.create(session, imageURL)])
 	    ]);
-	    
+	    session.send(msg).endDialog();
 	    
 	    //
 	    
