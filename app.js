@@ -37,8 +37,8 @@ console.log('%s listening to %s', server.name, server.url);
 });
 // Create chat connector for communicating with the Bot Framework Service
 var connector = new builder.ChatConnector({
-    appId: process.env.MICROSOFT_APP_ID,
-    appPassword: process.env.MICROSOFT_APP_PASSWORD  
+    appId: "92129e20-3f64-4aed-806d-0cd2c7c7d8cb",
+    appPassword: "zvzGUB64mjjjMSGW759}[}_"  
 });
 
 // Listen for messages from users
