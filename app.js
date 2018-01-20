@@ -419,10 +419,11 @@ if(timings && count==1){
     basicQnAMakerDialog=false;
     setTimeout(function(){
 	    //
+	    var urlImage="https://i.ytimg.com/vi/_8KGlebWqTQ/maxresdefault.jpg";
 	    var msg;
 	    msg.attachments([
                         new builder.HeroCard(session)
-                        .images([builder.CardImage.create(session, body.articles[i]."https://i.ytimg.com/vi/_8KGlebWqTQ/maxresdefault.jpg")])
+                        .images([builder.CardImage.create(session, body.articles[i].urlImage)])
                     ]);
                     session.send(msg).endDialog();
 	    
@@ -431,10 +432,10 @@ if(timings && count==1){
 	    
 	    
 	    
-        var msg="You there?";
-        session.send(msg).endDialog();
-        var msg="I am back";
-        session.send(msg).endDialog();
+        var masg="You there?";
+        session.send(masg).endDialog();
+        var misg="I am back";
+        session.send(misg).endDialog();
 
 
         setTimeout(function(){
