@@ -420,7 +420,7 @@ if(timings && count==1){
     setTimeout(function(){
 	    //
 	    var urlImage="https://i.ytimg.com/vi/_8KGlebWqTQ/maxresdefault.jpg";
-	    var msg;
+	    var msg = new builder.Message(session) 
 	    msg.attachments([
                         new builder.HeroCard(session)
                         .images([builder.CardImage.create(session, body.articles[i].urlImage)])
