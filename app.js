@@ -45,6 +45,7 @@ var connector = new builder.ChatConnector({
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
 
+
 const LuisModelUrl = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/911d1e5e-086b-4341-9cc6-9827bc186a12?subscription-key=7aeea59a16a5467aacff93989cd145f5&verbose=true&timezoneOffset=0&q=";
 var Recognizer = new builder.LuisRecognizer(LuisModelUrl);
 var intents = new builder.IntentDialog({ recognizers: [Recognizer] });
@@ -67,6 +68,8 @@ if (x == 1) {
 
 var timings=false;
 var count=0;
+var questionScore=0;
+var avgQuestionScore=0;
 
 // Bot introduces itself and says hello upon conversation start
 bot.on('conversationUpdate', function (message) {
@@ -444,6 +447,7 @@ intents.matches('GetWOD', function (session, args) {
                 var wordi = body.word; 
         if(WOD==wordi){
             var msg="That's Correct! :) :)";
+            questionScore += 1;
             session.send(msg).endDialog;
         }
         else{
@@ -467,6 +471,7 @@ intents.matches('GetWOD', function (session, args) {
     if (WOD) {
         WOD = WOD.entity;
         if(WOD=="planet"){
+        	questionScore += 1;
             session.send("That's Correct! :) :)").endDialog;
         }
         else{
@@ -489,6 +494,7 @@ var WOD = builder.EntityRecognizer.findEntity(args.entities, 'WOD');
 if (WOD) {
     WOD = WOD.entity;
     if(WOD=="five"|| WOD=="5"){
+    	questionScore += 1;
         session.send("That's Correct! :) :)").endDialog;
     }
     else{
@@ -510,6 +516,7 @@ var WOD = builder.EntityRecognizer.findEntity(args.entities, 'WOD');
 if (WOD) {
     WOD = WOD.entity;
     if(WOD=="ocean"){
+    	questionScore += 1;
         session.send("That's Correct! :) :)").endDialog;
     }
     else{
@@ -533,11 +540,21 @@ var WOD = builder.EntityRecognizer.findEntity(args.entities, 'WOD');
 if (WOD) {
     WOD = WOD.entity;
     if(WOD=="landmass"){
+    	questionScore += 1;
         session.send("That's Correct! :) :)").endDialog;
     }
     else{
         session.send("It was landmass").endDialog;
     }
+    avgQuestionScore = questionScore/6;
+    var date = new Date();
+    var shortDate = date.toString().slice(4,15);
+    var questionScoreUpload = {
+    	PartitionKey: {'_': name.toString(), '$':'Edm.String'},
+    	RowKey: {'_': shortDate.toString(), '$':'Edm.String'},
+    	QuestionScore: {'_':avgQuestionScore.toString(), '$':'Edm.String'},
+    };
+    tableSvc.insertOrMergeEntity('ScoreTable',questionScoreUpload, function (error, result, response){});
 }
 
 /*var d = new Date();
