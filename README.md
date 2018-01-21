@@ -26,7 +26,7 @@ and then prevent the disease asap.
 
 ## How we built it
 
-Using Azure
+Using Azure and node.js
 
 ## Challenges we ran into
 
