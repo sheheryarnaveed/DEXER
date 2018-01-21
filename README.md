@@ -30,16 +30,16 @@ Using Azure
 
 ## Challenges we ran into
 
--Deployment on Skype because skype doesnot supports some of the features.
--Integratng Luis and QnA Maker.
--Getting the username and storing it in the Azure table Storage
+-Deployment on Skype because Skype does not support some of the features.
+-Integrating Luis and QnA Maker.
+-Getting the username and storing it in the Azure Table Storage
 -Sending the email to the relatives of the patient if the stage of the disease is intense.
 
 
 
 ## Accomplishments that we're proud of
 -No such product which provides the preventive diagnosis of AZ disease patients exists.
--Collaborated a lot of microsoft services in our bot at a single platform successfully.
+-Collaborated a lot of Microsoft services in our bot on a single platform successfully.
 -We were able to achieve our purpose within the 24 hours hackathon.
 
 
