@@ -520,7 +520,7 @@ if (WOD) {
         session.send("Five was the correct answer").endDialog;
     }
 }
-var msg="Large areas of salty water are caled_____?";
+var msg="Large areas of salty water are called_____?";
     session.send(msg).endDialog;
     const LuisModelUrl = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/911d1e5e-086b-4341-9cc6-9827bc186a12?subscription-key=7aeea59a16a5467aacff93989cd145f5&verbose=true&timezoneOffset=0&q=";
     var recognizer = new builder.LuisRecognizer(LuisModelUrl);
