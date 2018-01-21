@@ -11,7 +11,7 @@ and then prevent the disease asap.
 
 ### Diagnosis:
 - Spotting the below symptoms:
-- Short-term memory lost
+- Short-term memory loss
 - Negative emotions
 - Apathy
 
@@ -39,7 +39,7 @@ Using Azure
 
 ## Accomplishments that we're proud of
 -No such product which provides the preventive diagnosis of AZ disease patients exists.
--Collaborated a lot of microsoft servuices in our bot at a single platform successfully.
+-Collaborated a lot of microsoft services in our bot at a single platform successfully.
 -We were able to achieve our purpose within the 24 hours hackathon.
 
 
