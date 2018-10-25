@@ -37,8 +37,8 @@ console.log('%s listening to %s', server.name, server.url);
 });
 // Create chat connector for communicating with the Bot Framework Service
 var connector = new builder.ChatConnector({
-    appId: "92129e20-3f64-4aed-806d-0cd2c7c7d8cb",
-    appPassword: "zvzGUB64mjjjMSGW759}[}_"  
+    appId: "",
+    appPassword: ""  
 });
 
 //var exe;
@@ -55,8 +55,8 @@ var intents = new builder.IntentDialog({ recognizers: [Recognizer] });
 var x = 1;
 // setting up QnA Maker
 var recognizer = new builder_cognitiveservices.QnAMakerRecognizer({
-    knowledgeBaseId: '695169f1-b6b3-4a6d-9f9c-5079490e6eec', // process.env.QnAKnowledgebaseId, 
-    subscriptionKey: '28beda6a7ff54b0db4e7b8da16f77801'
+    knowledgeBaseId: '', // process.env.QnAKnowledgebaseId, 
+    subscriptionKey: ''
 }); //process.env.QnASubscriptionKey});
 if (x == 1) {
     var basicQnAMakerDialog = new builder_cognitiveservices.QnAMakerDialog({
