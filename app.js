@@ -11,8 +11,8 @@ var motivation = require("motivation");
 var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
 
 var tone_analyzer = new ToneAnalyzerV3({
-  username: "6c217e88-87a7-4f61-97b2-70ae74e165d3",
-  password: "xBO5QFA3lhzO",
+  username: "",
+  password: "",
   version_date: '2017-09-21'
 });
 
